@@ -8,6 +8,7 @@ export const Message = () => {
       const { x, y } = event;
       setCoords({ x, y });
     };
+
     window.addEventListener("mousemove", onMouseMove);
 
     return () => {
