@@ -8,8 +8,9 @@ import { SimpleFormApp } from "./02-useEffect/SimpleFormApp";
 import { FormWithCustomHookApp } from "./02-useEffect/FormWithCustomHookApp";
 import { MultipleCustomHooksApp } from "./03-examples/MultipleCustomHooksApp";
 import { FocusScreenApp } from "./04-useRef/FocusScreenApp";
+import { LayoutApp } from "./05-useLayoutEffect/LayoutApp";
 
-ReactDOM.createRoot(document.getElementById("root")).render(<FocusScreenApp />);
+ReactDOM.createRoot(document.getElementById("root")).render(<LayoutApp />);
 
 //<React.StrictMode>
 //  {/* <HooksApp /> */}
