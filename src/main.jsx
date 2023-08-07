@@ -1,9 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
 import "./index.css";
-import { Parent } from "./07-memo-homework/Parent.jsx";
+import "./08-useReducer/intro-reducer.js";
 
-ReactDOM.createRoot(document.getElementById("root")).render(<Parent />);
+// ReactDOM.createRoot(document.getElementById("root")).render(<Parent />);
 
 //<React.StrictMode>
 //  {/* <HooksApp /> */}
