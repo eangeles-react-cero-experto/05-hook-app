@@ -2,23 +2,21 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 
 export const FormAddTodoItem = ({ onNewTodoItemAdded }) => {
-  const [todoItem, setTodoItem] = useState({
-    id: crypto.randomUUID(),
-    description: "",
-    isDone: false,
-  });
+  const [description, setDescription] = useState("");
 
   const onSubmit = (event) => {
     event.preventDefault();
-    onNewTodoItemAdded(todoItem);
+    onNewTodoItemAdded({
+      id: crypto.randomUUID(),
+      description,
+      isDone: false,
+    });
+
+    setDescription("");
   };
 
   const onInputChanged = (event) => {
-    setTodoItem({
-      ...todoItem,
-      id: crypto.randomUUID(),
-      description: event.target.value,
-    });
+    setDescription(event.target.value);
   };
 
   return (
@@ -26,6 +24,7 @@ export const FormAddTodoItem = ({ onNewTodoItemAdded }) => {
       <form onSubmit={onSubmit}>
         <input
           onChange={onInputChanged}
+          value={description}
           type="text"
           placeholder="Description here"
           className="form-control"

@@ -1,41 +1,39 @@
-import { useReducer } from "react";
-import { todoListReducer } from "./todoListReducer.js";
 import { FormAddTodoItem, TodoList } from "./components";
-
-const initialState = [
-  {
-    id: crypto.randomUUID(),
-    description: "Collect the soul stone",
-    isDone: false,
-  },
-  {
-    id: crypto.randomUUID(),
-    description: "Collect the power stone",
-    isDone: false,
-  },
-];
+import { useTodoList } from "./hooks/useTodoList.js";
 
 export const MyTodoApp = () => {
-  const [state, dispatch] = useReducer(todoListReducer, initialState);
-
-  const handleNewTodoItemAdded = (todoItem) => {
-    console.log("todoItem: ", todoItem);
-  };
+  const {
+    todoList,
+    todoItemsAmount,
+    completedTodoItemsAmount,
+    addNewTodoItem,
+    deleteTodoItem,
+    toggleTodoItem,
+  } = useTodoList();
 
   return (
     <>
-      <h1>MyTodoApp (10)</h1>
+      <h1>
+        MyTodoApp &nbsp;
+        <small>
+          ({completedTodoItemsAmount} / {todoItemsAmount})
+        </small>
+      </h1>
       <hr />
 
       <div className="row">
         <div className="col-6">
-          <TodoList todoList={state} />
+          <TodoList
+            todoList={todoList}
+            onToggleTodoItem={toggleTodoItem}
+            onDeleteTodoItem={deleteTodoItem}
+          />
         </div>
         <div className="col-6">
           <h4>Add Todo</h4>
           <hr />
 
-          <FormAddTodoItem onNewTodoItemAdded={handleNewTodoItemAdded} />
+          <FormAddTodoItem onNewTodoItemAdded={addNewTodoItem} />
         </div>
       </div>
     </>
