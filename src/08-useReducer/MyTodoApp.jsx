@@ -1,5 +1,6 @@
 import { useReducer } from "react";
 import { todoListReducer } from "./todoListReducer.js";
+import { FormAddTodoItem, TodoList } from "./components";
 
 const initialState = [
   {
@@ -17,6 +18,10 @@ const initialState = [
 export const MyTodoApp = () => {
   const [state, dispatch] = useReducer(todoListReducer, initialState);
 
+  const handleNewTodoItemAdded = (todoItem) => {
+    console.log("todoItem: ", todoItem);
+  };
+
   return (
     <>
       <h1>MyTodoApp (10)</h1>
@@ -24,35 +29,13 @@ export const MyTodoApp = () => {
 
       <div className="row">
         <div className="col-6">
-          {/* TodoList */}
-          <ul className="list-group">
-            {/* TodoItem */}
-            <li className="list-group-item d-flex justify-content-between align-items-center">
-              <span>Item 1</span>
-              <button className="btn btn-sm btn-outline-danger">Remove</button>
-            </li>
-            {/* TodoItem */}
-            <li className="list-group-item">Item 2</li>
-            <li className="list-group-item">Item 3</li>
-          </ul>
-          {/* TodoList */}
+          <TodoList todoList={state} />
         </div>
         <div className="col-6">
           <h4>Add Todo</h4>
           <hr />
-          {/* FromAddTodo onNewTodoItemAdded */}
-          <form>
-            <input
-              type="text"
-              placeholder="Description here"
-              className="form-control"
-            />
 
-            <button type="submit" className="btn btn-outline-primary mt-3">
-              Add Item
-            </button>
-          </form>
-          {/* FormAddTodo */}
+          <FormAddTodoItem onNewTodoItemAdded={handleNewTodoItemAdded} />
         </div>
       </div>
     </>
