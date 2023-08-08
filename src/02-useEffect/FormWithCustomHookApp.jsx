@@ -1,8 +1,7 @@
-import { useState } from "react";
 import { useForm } from "../hooks/useForm";
 
 export const FormWithCustomHookApp = () => {
-  const { formState, onInputChanged, onFormReseted } = useForm({
+  const { formState, onInputChanged, resetForm } = useForm({
     username: "",
     email: "",
     password: "",
@@ -46,7 +45,7 @@ export const FormWithCustomHookApp = () => {
 
       <br />
 
-      <button className="btn btn-primary" onClick={onFormReseted}>
+      <button className="btn btn-primary" onClick={resetForm}>
         Reset
       </button>
     </>
