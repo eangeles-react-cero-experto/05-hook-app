@@ -1,8 +1,9 @@
+import ReactDOM from "react-dom/client";
 import "./index.css";
-import "./08-useReducer/intro-reducer.js";
+import { MyTodoApp } from "./08-useReducer/MyTodoApp.jsx";
 
-// ReactDOM.createRoot(document.getElementById("root")).render(<Parent />);
-
+ReactDOM.createRoot(document.getElementById("root")).render(<MyTodoApp />);
+// ReactDOM
 //<React.StrictMode>
 //  {/* <HooksApp /> */}
 //  {/* <CounterApp /> */}
