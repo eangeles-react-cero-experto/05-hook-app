@@ -1,12 +1,16 @@
 import { useEffect, useReducer } from "react";
 import { todoListReducer } from "../todoListReducer.js";
 
-const init = () => {
+const initializer = () => {
   return JSON.parse(localStorage.getItem("todoList") || "[]");
 };
 
 export const useTodoList = (initialValue = []) => {
-  const [todoList, dispatch] = useReducer(todoListReducer, initialValue, init);
+  const [todoList, dispatch] = useReducer(
+    todoListReducer,
+    initialValue,
+    initializer,
+  );
 
   useEffect(() => {
     localStorage.setItem("todoList", JSON.stringify(todoList));
@@ -36,13 +40,15 @@ export const useTodoList = (initialValue = []) => {
     dispatch(action);
   };
 
+  const todoItemsAmount = todoList.length;
+  const completedTodoItemsAmount = todoList.filter((x) => x.isDone).length;
+  const pendingTodoItemsAmount = todoList.filter((x) => !x.isDone).length;
+
   return {
     todoList,
-    todoItemsAmount: todoList.length,
-    completedTodoItemsAmount: todoList.filter((todoItem) => todoItem.isDone)
-      .length,
-    pendingTodoItemsAmount: todoList.filter((todoItem) => !todoItem.isDone)
-      .length,
+    todoItemsAmount,
+    completedTodoItemsAmount,
+    pendingTodoItemsAmount,
     addNewTodoItem,
     deleteTodoItem,
     toggleTodoItem,
