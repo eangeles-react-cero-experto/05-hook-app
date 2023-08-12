@@ -35,7 +35,7 @@ TodoItem.propTypes = {
     id: PropTypes.string.isRequired,
     description: PropTypes.any,
     isDone: PropTypes.bool.isRequired,
-  }),
+  }).isRequired,
   onToggleTodoItem: PropTypes.func.isRequired,
   onDeleteTodoItem: PropTypes.func.isRequired,
 };

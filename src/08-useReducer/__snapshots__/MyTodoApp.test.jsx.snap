@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test MyTodoApp should match with snapshot 1`] = `
+<div>
+  <h1>
+    MyTodoApp  
+    <small>
+      (
+      1
+       / 
+      2
+      )
+    </small>
+  </h1>
+  <hr />
+  <div
+    class="row"
+  >
+    <div
+      class="col-6"
+    >
+      <ul
+        class="list-group"
+      >
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center"
+        >
+          <span
+            class="w-100 "
+          >
+            Walk the dog
+          </span>
+          <button
+            class="btn btn-sm btn-outline-danger"
+          >
+            Remove
+          </button>
+        </li>
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center"
+        >
+          <span
+            class="w-100 text-decoration-line-through"
+          >
+            Make dinner
+          </span>
+          <button
+            class="btn btn-sm btn-outline-danger"
+          >
+            Remove
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="col-6"
+    >
+      <h4>
+        Add Todo
+      </h4>
+      <hr />
+      <form>
+        <input
+          class="form-control"
+          placeholder="Description here"
+          type="text"
+          value=""
+        />
+        <button
+          class="btn btn-outline-primary mt-3"
+          type="submit"
+        >
+          Add Item
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+`;

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { TodoItem } from "./TodoItem.jsx";
+import { TodoItem } from "../TodoItem/TodoItem.jsx";
 
 export const TodoList = ({
   todoList = [],
