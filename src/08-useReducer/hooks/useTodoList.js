@@ -1,5 +1,5 @@
 import { useEffect, useReducer } from "react";
-import { todoListReducer } from "../todoListReducer.js";
+import { todoListReducer } from "../reducers/todoListReducer.js";
 
 const initializer = () => {
   return JSON.parse(localStorage.getItem("todoList") || "[]");
