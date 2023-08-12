@@ -1,5 +1,5 @@
-import { FormAddTodoItem, TodoList } from "./components";
-import { useTodoList } from "./hooks/useTodoList.js";
+import { FormAddTodoItem, TodoList } from "../components/index.js";
+import { useTodoList } from "../hooks/useTodoList.js";
 
 export const MyTodoApp = () => {
   const {

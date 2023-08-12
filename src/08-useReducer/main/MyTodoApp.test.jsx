@@ -1,9 +1,9 @@
-import { useTodoList } from "./hooks/useTodoList.js";
+import { useTodoList } from "../hooks/useTodoList.js";
 import * as crypto from "crypto";
 import { render, screen } from "@testing-library/react";
 import { MyTodoApp } from "./MyTodoApp.jsx";
 
-jest.mock("./hooks/useTodoList.js");
+jest.mock("../hooks/useTodoList.js");
 
 describe("Test MyTodoApp", () => {
   const todoList = [
