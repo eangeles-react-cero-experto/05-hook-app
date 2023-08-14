@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test HomePage should match with snapshot 1`] = `
+<div>
+  <h1>
+    HomePage 
+    <small>
+      John Due
+    </small>
+  </h1>
+  <hr />
+  <pre
+    data-testid="code-block"
+  >
+    {
+    "username": "John Due",
+    "email": "john@email.com"
+}
+  </pre>
+</div>
+`;
