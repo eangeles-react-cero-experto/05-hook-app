@@ -29,7 +29,15 @@ describe("Test HomePage", () => {
     expect(preElement.innerHTML).toEqual("null");
   });
 
-  it('should render the component with the user', () => {
+  it("should render the component with the user", () => {
+    render(
+      <UserContext.Provider value={{ user }}>
+        <HomePage />
+      </UserContext.Provider>,
+    );
 
-  })
+    const preElement = screen.getByTestId("code-block");
+    expect(screen.findByText(user.username)).toBeTruthy();
+    expect(screen.findByText(user.email)).toBeTruthy();
+  });
 });
