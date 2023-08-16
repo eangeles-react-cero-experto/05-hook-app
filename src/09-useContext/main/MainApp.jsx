@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { AboutPage, HomePage, LoginPage } from "./pages/index.js";
-import { Navbar } from "./components/index.js";
-import { UserProvider } from "./context/UserProvider.jsx";
+import { AboutPage, HomePage, LoginPage } from "../pages/index.js";
+import { Navbar } from "../components/index.js";
+import { UserProvider } from "../context/UserProvider.jsx";
 
 export const MainApp = () => {
   return (
