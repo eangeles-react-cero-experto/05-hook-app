@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test LoginPage should match with snapshot 1`] = `
+<div>
+  <h1>
+    LoginPage
+  </h1>
+  <hr />
+  <form>
+    <input
+      class="form-control"
+      name="username"
+      placeholder="username"
+      type="text"
+      value=""
+    />
+    <br />
+    <input
+      class="form-control"
+      name="email"
+      placeholder="email"
+      type="email"
+      value=""
+    />
+    <br />
+    <br />
+    <button
+      class="btn btn-primary"
+      type="submit"
+    >
+        Login  
+    </button>
+  </form>
+  <br />
+  <br />
+  <pre
+    data-testid="code-block"
+  >
+    {
+    "username": "John Due",
+    "email": "john@email.com"
+}
+  </pre>
+</div>
+`;

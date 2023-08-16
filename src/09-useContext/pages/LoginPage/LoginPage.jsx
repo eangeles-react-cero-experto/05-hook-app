@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { UserContext } from "../context/UserContext.jsx";
-import { FormLogin } from "../components/index.js";
+import { UserContext } from "../../context/UserContext.jsx";
+import { FormLogin } from "../../components/index.js";
 
 export const LoginPage = () => {
   const { user } = useContext(UserContext);
@@ -15,7 +15,7 @@ export const LoginPage = () => {
       <br />
       <br />
 
-      <pre>{JSON.stringify(user, null, 4)}</pre>
+      <pre data-testid="code-block">{JSON.stringify(user, null, 4)}</pre>
     </>
   );
 };

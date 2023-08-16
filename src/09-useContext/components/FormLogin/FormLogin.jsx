@@ -1,6 +1,6 @@
-import { useForm } from "../hooks/index.js";
+import { useForm } from "../../hooks/index.js";
 import { useContext } from "react";
-import { UserContext } from "../context/UserContext.jsx";
+import { UserContext } from "../../context/UserContext.jsx";
 
 export const FormLogin = () => {
   const { setUser } = useContext(UserContext);

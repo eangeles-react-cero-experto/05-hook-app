@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test FormLogin should match with snapshot 1`] = `
+<div>
+  <form>
+    <input
+      class="form-control"
+      name="username"
+      placeholder="username"
+      type="text"
+      value=""
+    />
+    <br />
+    <input
+      class="form-control"
+      name="email"
+      placeholder="email"
+      type="email"
+      value=""
+    />
+    <br />
+    <br />
+    <button
+      class="btn btn-primary"
+      type="submit"
+    >
+        Login  
+    </button>
+  </form>
+</div>
+`;

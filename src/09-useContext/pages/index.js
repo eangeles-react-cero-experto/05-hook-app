@@ -1,3 +1,3 @@
 export * from "./HomePage/HomePage.jsx";
 export * from "./AboutPage";
-export * from "./LoginPage";
+export * from "./LoginPage/LoginPage.jsx";
